@@ -25,15 +25,24 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
   # holiday_hash is identical to the one above
   # add the second argument, which is a supply, to BOTH the
   # Christmas AND the New Year's arrays
+<<<<<<< HEAD
   holiday_hash[:winter][:christmas] << supply
   holiday_hash[:winter][:new_years] << supply
+=======
+  holiday_hash[:winter][:christmas] << supply 
+  holiday_hash[:winter][:new_years] << supply 
+>>>>>>> 92d43dce991a0610fa7ce1b082d52073308bd494
 end
 
 
 def add_supply_to_memorial_day(holiday_hash, supply)
   # again, holiday_hash is the same as the ones above
   # add the second argument to the memorial day array
+<<<<<<< HEAD
   holiday_hash[:spring][:memorial_day] << supply
+=======
+  holiday_hash[:spring][:memorial_day] << supply 
+>>>>>>> 92d43dce991a0610fa7ce1b082d52073308bd494
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
@@ -45,9 +54,15 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter
+<<<<<<< HEAD
   new_array = Array.new
   string = ""
   new_array = holiday_hash[:winter].values
+=======
+  new_array = Array.new 
+  string = ""
+  new_array = holiday_hash[:winter].values 
+>>>>>>> 92d43dce991a0610fa7ce1b082d52073308bd494
   string = new_array.join(",")
   new_array = string.split(",")
 end
@@ -72,6 +87,14 @@ Spring:
   puts <<TEXT
 #{string}
 TEXT
+=======
+  holiday_hash.each do |key,value|
+		  puts "#{key}:".capitalize
+			value.each do |data|
+				puts "#{data}".to_s
+			end
+	 end
+>>>>>>> 92d43dce991a0610fa7ce1b082d52073308bd494
 end
 
 
@@ -79,6 +102,7 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
+<<<<<<< HEAD
   new_array = Array.new
   holiday_hash.each do |key,value|
     value.each do |key2,value2|
@@ -90,4 +114,8 @@ def all_holidays_with_bbq(holiday_hash)
     end
   end
   new_array
+=======
+  holiday_hash.collect 
+
+>>>>>>> 92d43dce991a0610fa7ce1b082d52073308bd494
 end
